@@ -1,0 +1,1 @@
+select w.*  from worker w group by w.id  having w.salary = (select max(salary) from worker);
