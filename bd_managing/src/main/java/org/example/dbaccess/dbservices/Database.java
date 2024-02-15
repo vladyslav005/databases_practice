@@ -1,27 +1,46 @@
-package org.example.dbaccess;
+package org.example.dbaccess.dbservices;
 
 import org.example.props.PropertyReader;
 
+import java.io.IOException;
 import java.sql.*;
+import java.util.logging.*;
 
 public class Database {
+    public static Logger LOGGER = Logger.getLogger(DatabaseQueryService.class.getName());
+    static {
+        Handler ch =  new ConsoleHandler();
+        ch.setFormatter(new SimpleFormatter());
+        LOGGER.addHandler(ch);
+
+        try {
+            Handler fh = new FileHandler("logs/db.log", false);
+            fh.setFormatter(new SimpleFormatter());
+            LOGGER.addHandler(fh);
+        } catch (IOException e) {;
+            throw new RuntimeException(e);
+        }
+    }
 
     private Connection connection = null;
     private static final Database instance = new Database();
-    private Database() {getConnection();}
+
+    private Database() {
+        getConnection();
+    }
 
     public static Database getInstance() {
         return instance;
     }
 
-    public Connection getConnection()  {
+    public Connection getConnection() {
         if (connection == null) {
 
             try {
                 connection = DriverManager.getConnection(
                         PropertyReader.getDbURL(), PropertyReader.getBdUsername(), PropertyReader.getBdUPassword());
             } catch (SQLException e) {
-                System.out.println("Connection failed");
+                LOGGER.warning("Connection failed" + e.getMessage());
                 throw new RuntimeException(e);
             }
         }
@@ -32,16 +51,16 @@ public class Database {
         try {
             return getConnection().createStatement();
         } catch (SQLException e) {
-            System.out.println("Unable to create statement");
+            LOGGER.warning("Unable to create statement");
             throw new RuntimeException(e);
         }
     }
 
     public int executeUpdate(String query) {
-        try(Statement statement = connection.createStatement()) {
+        try (Statement statement = connection.createStatement()) {
             return statement.executeUpdate(query);
-        } catch(SQLException e) {
-            System.out.println(String.format("Exception. Reason: %s", e.getMessage()));
+        } catch (SQLException e) {
+            LOGGER.warning("Exception. Reason: " + e.getMessage());
             throw new RuntimeException("Can not run query.");
         }
     }
@@ -50,8 +69,8 @@ public class Database {
         try {
             Statement statement = connection.createStatement();
             return statement.executeQuery(query);
-        } catch(SQLException e) {
-            System.out.println(String.format("Exception. Reason: %s", e.getMessage()));
+        } catch (SQLException e) {
+            LOGGER.warning("Exception. Reason: " + e.getMessage());
             throw new RuntimeException("Can not run query.");
         }
     }
@@ -65,24 +84,6 @@ public class Database {
             throw new RuntimeException(e);
         }
     }
-
-    public void testQuery() {
-        String query = "select * from worker order by id asc";
-
-        try (Statement statement = getConnection().createStatement();){
-            ResultSet resultSet = statement.executeQuery(query);
-
-            while (resultSet.next()) {
-                System.out.println( resultSet.getInt("id") + " " + resultSet.getString("name"));
-            }
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
-
-
 
 
 

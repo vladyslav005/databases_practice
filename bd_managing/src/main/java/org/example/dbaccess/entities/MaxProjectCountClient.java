@@ -1,9 +1,11 @@
-package org.example.dbaccess.data;
+package org.example.dbaccess.entities;
 
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class MaxProjectCountClient {
     private int id;
     private String name;
