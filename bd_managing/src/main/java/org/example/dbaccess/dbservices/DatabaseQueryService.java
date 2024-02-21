@@ -29,7 +29,6 @@ public class DatabaseQueryService {
         }
     }
 
-
     public List<MaxProjectCountClient> findMaxProjectsClient() {
         try (Statement st = Database.getInstance().createStatement()) {
             ResultSet rs = st.executeQuery(getQueryFromFile("sql/find_max_projects_client.sql"));
@@ -108,7 +107,7 @@ public class DatabaseQueryService {
     }
 
 
-    public static String getQueryFromFile(String filename) throws InputMismatchException{
+    public static String getQueryFromFile(String filename) throws InputMismatchException {
         InputStream input = DatabaseInitService.class.getClassLoader().getResourceAsStream(filename);
 
         if (input == null) throw new InputMismatchException();
