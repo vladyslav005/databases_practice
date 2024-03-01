@@ -7,19 +7,19 @@ import java.sql.*;
 import java.util.logging.*;
 
 public class Database {
-    public static Logger LOGGER = Logger.getLogger(DatabaseQueryService.class.getName());
+    public static Logger LOGGER = Logger.getLogger(Database.class.getName());
     static {
         Handler ch =  new ConsoleHandler();
         ch.setFormatter(new SimpleFormatter());
         LOGGER.addHandler(ch);
 
-        try {
-            Handler fh = new FileHandler("logs/db.log", false);
-            fh.setFormatter(new SimpleFormatter());
-            LOGGER.addHandler(fh);
-        } catch (IOException e) {;
-            throw new RuntimeException(e);
-        }
+//        try {
+//            Handler fh = new FileHandler("logs/db", false);
+//            fh.setFormatter(new SimpleFormatter());
+//            LOGGER.addHandler(fh);
+//        } catch (IOException e) {;
+//            throw new RuntimeException(e);
+//        }
     }
 
     private Connection connection = null;

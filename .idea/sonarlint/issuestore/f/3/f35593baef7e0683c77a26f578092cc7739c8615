@@ -1,0 +1,12 @@
+
+`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ
+`	java:S112+"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ
+`	java:S1124"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ
+`	java:S112A"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ
+`	java:S112W"FDefine and throw a dedicated exception instead of using a generic one.(―εΥψÿÿÿÿ
+b
+java:S2095K"GUse try-with-resources or close this "Statement" in a "finally" clause.(ν–ƒψÿÿÿÿ
+m	java:S116"XRename this field "INSERT_WORKER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΉΜΟ
+n	java:S116"YRename this field "INSERT_PROJECT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Όβι
+q	java:S116"WRename this field "INSERT_CIENT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ηφαυÿÿÿÿÿ
+@	java:S106P"+Replace this use of System.out by a logger.(π

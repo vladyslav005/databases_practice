@@ -8,7 +8,6 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.time.LocalDate;
 import java.util.Scanner;
 
 public class DatabasePopulateService {
@@ -70,7 +69,7 @@ public class DatabasePopulateService {
 
 
         public static void populateDataBase() throws SQLException {
-        InputStream input = DatabasePopulateService.class.getClassLoader().getResourceAsStream("sql/populate_db.sql");
+        InputStream input = DatabasePopulateService.class.getClassLoader().getResourceAsStream("db/migration/V2__populate_db.sql");
         Scanner s = new Scanner(input).useDelimiter(";");
 
         Statement statement = Database.getInstance().createStatement();

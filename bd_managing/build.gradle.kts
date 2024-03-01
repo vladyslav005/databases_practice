@@ -19,6 +19,9 @@ dependencies {
     compileOnly("org.projectlombok:lombok:1.18.30")
 
 
+    implementation("org.flywaydb:flyway-core:9.22.3")
+
+
 }
 
 tasks.test {

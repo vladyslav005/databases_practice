@@ -1,11 +1,11 @@
-drop table if exists worker cascade;
-drop table if exists client cascade;
-drop table if exists project cascade;
-drop table if exists project_worker cascade;
+-- drop table if exists worker cascade;
+-- drop table if exists client cascade;
+-- drop table if exists project cascade;
+-- drop table if exists project_worker cascade;
 
-drop sequence if exists worker_seq;
-drop sequence if exists client_seq;
-drop sequence if exists project_seq;
+-- drop sequence if exists worker_seq;
+-- drop sequence if exists client_seq;
+-- drop sequence if exists project_seq;
 
 CREATE SEQUENCE public.worker_seq start 1;
 CREATE SEQUENCE public.client_seq start 1;

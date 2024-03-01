@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class DatabaseInitService {
     public static void main(String[] args) throws SQLException {
-        InputStream input = DatabaseInitService.class.getClassLoader().getResourceAsStream("sql/init_db.sql");
+        InputStream input = DatabaseInitService.class.getClassLoader().getResourceAsStream("migrations/V1__init_database.sql");
         Scanner s = new Scanner(input).useDelimiter(";");
         Statement statement = Database.getInstance().createStatement();
 
