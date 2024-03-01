@@ -3,9 +3,9 @@ g	java:S112*"FDefine and throw a dedicated exception instead of using a generi
 g	java:S112="FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ΈΠ¬αί1
 g	java:S112H"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ΈΠ¬αί1
 g	java:S112R"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ΉΠ¬αί1
-g	java:S112c"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ΉΠ¬αί1
-g	java:S112t"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ΉΠ¬αί1
-h	java:S112…"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ΉΠ¬αί1
+g	java:S112f"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ΉΠ¬αί1
+g	java:S112w"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ΉΠ¬αί1
+h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ΉΠ¬αί1
 |	java:S116"[Rename this field "GET_CLIENT_BY_ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(λ†ύώÿÿÿÿ8ΗΠ¬αί1
 y	java:S116"XRename this field "INSERT_CLIENT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ν€Ύ„ώÿÿÿÿ8ΗΠ¬αί1
 z	java:S116"YRename this field "GET_LAST_ADDED" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΞάΗ¤ψÿÿÿÿ8ΘΠ¬αί1

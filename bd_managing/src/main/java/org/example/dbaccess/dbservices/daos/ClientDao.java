@@ -85,7 +85,10 @@ public class ClientDao {
 
     public long insertClient(String name) {
         try {
+            if (name.length() > 20) throw new SQLException("Name is too long");
+
             insertClient.setString(1, name);
+
 
             insertClient.executeUpdate();
 
